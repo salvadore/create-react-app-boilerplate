@@ -5,7 +5,9 @@ Required node version is `9.2.1`.
 The client app is bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
 and [Bootstrap 3.3](http://getbootstrap.com/docs/3.3/) framework and theme.
 
-## Starting the App
+## Settings
+
+### Environment Vars
 
 Copy `.env.dist` to `.env` and change the values of the environment variables if needed.
 
@@ -18,7 +20,16 @@ REACT_APP_API_VERIFY_TOKEN_URL=http://localhost:7770/verify-token
 REACT_APP_API_JWT_SECRET=jwtsecretcode
 ```
 
-Then run the following commands:
+### Config Files
+
+On the `./src/Config` directory, copy `*.js.dist` to `*./js` and change the configuration if needed.
+
+Example:
+
+[./src/Config/Admin/Users.js.dist](https://github.com/anthub-services/create-react-app-boilerplate/blob/react-datatable/src/Config/Admin/Users.js.dist)
+-> ./src/Config/Admin/Users.js
+
+## Starting the App
 
 ```
 yarn

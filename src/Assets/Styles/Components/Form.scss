@@ -3,3 +3,14 @@
     padding-left: 26px;
   }
 }
+.form-control {
+  &:focus, &:active:focus {
+    box-shadow: none;
+  }
+}
+.btn {
+  &:focus, &:focus:active {
+    box-shadow: none;
+    outline: none;
+  }
+}

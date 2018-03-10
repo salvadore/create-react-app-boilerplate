@@ -16,6 +16,8 @@ export default class Routes extends Component {
 
           <AdminRoute exact path="/admin" component={() => <Redirect to="/admin/dashboard" />} />
           <AdminRoute exact path="/admin/dashboard" component={Admin.Dashboard} />
+          <AdminRoute exact path="/admin/users" component={Admin.Users.List} />
+          <AdminRoute exact path="/admin/users/new" component={Admin.Users.New} />
           <AdminRoute exact path="/admin/settings" component={Admin.Settings} />
           <AdminRoute path="/admin/*" component={Admin.PageNotFound} />
 

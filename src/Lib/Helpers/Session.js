@@ -74,8 +74,8 @@ export function verifyToken() {
       .get(process.env.REACT_APP_API_VERIFY_TOKEN_URL)
       .catch(error => {
         console.log('Error: ', error)
-        Store.remove('token')
-        window.location.reload()
+        // Store.remove('token')
+        // window.location.reload()
       })
   }, 500);
 }

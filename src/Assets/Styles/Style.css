@@ -1,3 +1,6 @@
+html, body {
+  min-width: 768px; }
+
 html {
   min-height: 100%;
   position: relative; }
@@ -489,7 +492,8 @@ body {
     width: calc(100% - 200px); }
 
 .layout-admin > footer.footer {
-  position: fixed; }
+  position: fixed;
+  z-index: 1030; }
 
 .layout-admin .sidebar {
   background-color: #f5f5f5;
@@ -529,7 +533,7 @@ body {
   padding: 0 15px 100px; }
 
 .layout footer.footer {
-  z-index: 9999999; }
+  z-index: 1030; }
 
 .page-title {
   font-size: 25px;
@@ -576,6 +580,89 @@ a {
   .layout-admin .sidebar .sign-out-btn:hover {
     background-color: #eee; }
 
+.datatable {
+  position: relative; }
+  .datatable-header {
+    position: absolute;
+    right: 0;
+    top: -43px; }
+    .datatable-header * {
+      margin-left: 6px; }
+    .datatable-header a {
+      transition: none; }
+  .datatable-actions {
+    text-align: center; }
+    .datatable-actions > :first-child {
+      margin-right: 7px; }
+    .datatable-actions-delete-btn {
+      background: transparent;
+      color: #337ab7;
+      cursor: pointer;
+      border: none;
+      padding: 0; }
+      .datatable-actions-delete-btn:hover {
+        color: #23527c;
+        text-decoration: underline; }
+      .datatable-actions-delete-btn:focus {
+        outline: none; }
+
+.ReactTable .rt-thead.-header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none; }
+
+.ReactTable .rt-thead .rt-th {
+  font-weight: bold; }
+  .ReactTable .rt-thead .rt-th > div {
+    padding: 7px 5px; }
+  .ReactTable .rt-thead .rt-th.rt-resizable-header:focus {
+    outline: none; }
+
+.ReactTable .rt-tbody .rt-td {
+  border-color: rgba(0, 0, 0, 0.05); }
+
+.ReactTable .pagination-bottom .-pagination {
+  box-shadow: none; }
+
+.datatable-filters {
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  padding: 10px 15px 15px; }
+  .datatable-filters .date-filters {
+    display: flex; }
+    .datatable-filters .date-filters .form-group {
+      margin: 0 3px 15px; }
+  .datatable-filters .column-filters > form > .form-group {
+    margin-bottom: 10px;
+    text-align: center; }
+  .datatable-filters .column-filters > form .form-group fieldset {
+    margin-left: -3px; }
+    .datatable-filters .column-filters > form .form-group fieldset .form-group {
+      display: inline-block;
+      margin: 0 3px 10px;
+      text-align: left;
+      width: 100%; }
+      .datatable-filters .column-filters > form .form-group fieldset .form-group input {
+        width: 100%; }
+      @media (min-width: 769px) {
+        .datatable-filters .column-filters > form .form-group fieldset .form-group {
+          width: 48%; } }
+      @media (min-width: 1143px) {
+        .datatable-filters .column-filters > form .form-group fieldset .form-group {
+          width: 32.65%; } }
+      @media (min-width: 1208px) {
+        .datatable-filters .column-filters > form .form-group fieldset .form-group {
+          width: 24%; } }
+  .datatable-filters .column-filters-buttons {
+    margin-bottom: 0;
+    text-align: center; }
+    .datatable-filters .column-filters-buttons > :first-child {
+      margin-right: 6px; }
+    .datatable-filters .column-filters-buttons .btn {
+      width: 115px; }
+
+.react-datepicker-popper {
+  z-index: 1000; }
+
 .alert {
   background-image: none; }
   .alert.alert-dismissable {
@@ -586,6 +673,13 @@ a {
 
 .form .error-detail {
   padding-left: 26px; }
+
+.form-control:focus, .form-control:active:focus {
+  box-shadow: none; }
+
+.btn:focus, .btn:focus:active {
+  box-shadow: none;
+  outline: none; }
 
 .gospel-authors .btn:focus {
   outline: none; }
